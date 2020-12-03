@@ -2,7 +2,8 @@
   "manifest_version": 2,
   "name": "kasey's extention",
   "description": "this is my attempt at a browser extention",
-  "version": "0.1",
+  "version": "0.3",
+  "permissions": ["storage"],
   "content_scripts": [
     {
       "matches": [
@@ -12,9 +13,10 @@
       "js": [
         "content.js"
       ],
-      "run_at": "document_end"
+      "run_at": "document_idle"
     }
   ],
+  "options_page": "options.html",
   "icons": {
     "128": "images/icon.png"
   }
